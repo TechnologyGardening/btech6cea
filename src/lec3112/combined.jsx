@@ -8,6 +8,16 @@ class MyComponent extends React.Component {
     xyz: true,
     itms: ["a", "b", "c", "d"],
   };
+  constructor() {
+    super();
+    setTimeout(() => {
+      this.setState({
+        abc: "My Button2",
+        xyz: false,
+        itms: ["ice", "cream", "popcorn"],
+      });
+    }, 3000);
+  }
   render() {
     const { abc, xyz, itms } = this.state;
     return (
